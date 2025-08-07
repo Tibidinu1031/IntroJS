@@ -6,24 +6,23 @@ const robot = {
   model: '1E78V2',
   energyLevel: 100,
   provideInfo() {
-    return `I am ${this.model} and my current energy level is ${this.energyLevel}`
-    }
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}.`
+  }
 };
 
-console.log(robot.provideInfo());
+console.log(robot.provideInfo())
 
 console.log("----------------")
 console.log()
 
-const robott = {
+const rob0t = {
   energyLevel: 100,
-  checkEnergy(){
+  checkEnergy() {
     console.log(`Energy is currently at ${this.energyLevel}%.`)
   }
 }
 
-robott.checkEnergy();
+rob0t.checkEnergy();
 
 console.log("----------------")
 console.log()
-
