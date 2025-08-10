@@ -64,7 +64,7 @@ const r0bot = {
   }
 };
 
-roobot.numOfSensors = 100;
+r0bot.numOfSensors = 100;
 console.log(r0bot.numOfSensors)
 
 console.log("----------------")
@@ -83,3 +83,70 @@ const roobotFactory = (model, mobile) => {
 const tinCan = roobotFactory('P-500', true)
 
 tinCan.beep();
+
+console.log("----------------")
+console.log()
+
+const robotFactory = (model, mobile) => {
+  return {
+    model,
+    mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+
+// To check that the property value shorthand technique worked:
+const newRobot = robotFactory('P-501', false)
+console.log(newRobot.model)
+console.log(newRobot.mobile)
+
+console.log("----------------")
+console.log()
+
+const rooboot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  functionality: {
+    beep() {
+      console.log('Beep Boop');
+    },
+    fireLaser() {
+      console.log('Pew Pew');
+    },
+  }
+};
+
+const functionality = rooboot.functionality;
+functionality.beep();
+
+const { fireLaser } = rooboot.functionality;
+functionality.fireLaser();
+
+console.log("----------------")
+console.log()
+
+const robottt = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+// What is missing in the following method call?
+const robotttKeys = Object.keys(robottt);
+
+console.log(robotttKeys);
+
+const robotEntries = Object.entries(robottt)
+
+
+console.log(robotEntries);
+
+const newRobottt = Object.assign({ modelzzz: "T", voiceRecognition: true, plm: "plm" }, robottt)
+
+
+console.log(newRobottt);
+
